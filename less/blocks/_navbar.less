@@ -42,7 +42,7 @@
     padding: 16px 0;
     background-color: @primary;
     color: #fff;
-    transform: translateY(-100%);
+    transform: translateY(-200%);
 
     &_active {
         transform: translateY(0);
@@ -93,5 +93,30 @@
        display: block; 
        font-size: 14px;
        color: @text_color_light; 
+    }
+}
+@media (max-width: 991px) {
+    .navbar {
+        &_mobile, &_landline {
+            display: none;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .logo {
+        display: none;
+    }
+    .menu {
+        padding-bottom: 0;
+        top: 80px;
+        &-button {
+            height: 60px;
+        }
+        &_nav {
+            flex-direction: column;
+        }
+        &_link {
+            margin-bottom: 20px;
+        }
     }
 }
