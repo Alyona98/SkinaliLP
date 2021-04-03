@@ -587,11 +587,64 @@ input[type="checkbox"]:checked + label:before {
   z-index: 99;
   bottom: -80px;
 }
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .price-block {
     justify-content: center;
   }
   .price-block_card {
     margin: 20px;
+  }
+}
+.step {
+  position: relative;
+  text-align: center;
+}
+.step_title {
+  font-size: 18px;
+}
+.step:before {
+  content: '';
+  width: 75%;
+  height: 2px;
+  background-color: rgba(126, 123, 120, 0.5);
+  display: block;
+  position: absolute;
+  top: 15%;
+  right: -51%;
+}
+.step:last-child:before {
+  display: none;
+}
+.step_text {
+  max-width: 160px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.steps {
+  background-color: #f1f1f1;
+  padding-top: 1px;
+}
+.steps-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 1024px) {
+  .step:before {
+    width: 48%;
+    right: -24%;
+  }
+}
+@media (max-width: 991px) {
+  .step {
+    width: 33.33%;
+  }
+  .step:before {
+    display: none;
+  }
+}
+@media (max-width: 360px) {
+  .step {
+    width: 50%;
   }
 }
