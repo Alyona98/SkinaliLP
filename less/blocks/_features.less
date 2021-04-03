@@ -27,10 +27,17 @@
 @media (max-width: 768px) {
     .features{
         &-block {
+            flex-wrap: nowrap;
             &_item {
-                flex-basis: 100%;
                 margin-bottom: 50px;
             }
+        }
+    }
+}
+@media (max-width: 360px) {
+    .features{
+        &-block {
+            flex-wrap: wrap;
         }
     }
 }

@@ -40,6 +40,9 @@ img {
     color: #fff;
     font-weight: bold;
     text-decoration: none;
+    &:hover {
+        cursor: pointer;
+    }
     &-fitting {
         color: @primary;
         background-color: #fff;
@@ -90,8 +93,11 @@ input[type="checkbox"]{
 
 
 @media (max-width: 576px) {
-    .button-o {
+    .button{
         font-size: 10px;
+        &_o {
+            font-size: 10px;
+        }
     }
     .section {
         padding: 60px 0;
