@@ -4,6 +4,9 @@ body {
     .PNLight;
     color: @text_color;
 }
+img {
+    max-width: 100%;
+}
 
 .section {
     padding: 100px 0;
@@ -26,6 +29,7 @@ body {
     font-weight: bold;
     color: @primary;
     background-color: #fff;
+    text-decoration: none;
 }
 
 .button {
@@ -35,6 +39,22 @@ body {
     background-color: @primary;
     color: #fff;
     font-weight: bold;
+    text-decoration: none;
+    &-fitting {
+        color: @primary;
+        background-color: #fff;
+    }
+    &-add {
+        color: #fff;
+        background-color: lighten(@primary, 10%);
+    }
+    &-like {
+        background-color: @primary;
+        color: #fff;
+        height: 30px;
+        width: 30px;
+        border: none;
+    }
 }
 .bg-secondary {
     background: @bg-secondary;
