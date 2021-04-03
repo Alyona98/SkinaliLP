@@ -5,6 +5,19 @@ body {
     color: @text_color;
 }
 
+.section {
+    padding: 100px 0;
+    &-title {
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &_title {
+        margin-bottom: 100px;
+    }
+}
+
 .button_o {
     border: 2px solid @primary;
     text-transform: uppercase;
@@ -59,5 +72,11 @@ input[type="checkbox"]{
 @media (max-width: 576px) {
     .button-o {
         font-size: 10px;
+    }
+    .section {
+        padding: 60px 0;
+        &-title {
+            font-size: 24px;
+        }
     }
 }

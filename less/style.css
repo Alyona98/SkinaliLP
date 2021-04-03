@@ -45,6 +45,18 @@ body {
   font-family: 'Proxima Nova Light', sans-serif;
   color: #262626;
 }
+.section {
+  padding: 100px 0;
+}
+.section-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+.section_title {
+  margin-bottom: 100px;
+}
 .button_o {
   border: 2px solid #507fe1;
   text-transform: uppercase;
@@ -94,6 +106,12 @@ input[type="checkbox"]:checked + label:before {
 @media (max-width: 576px) {
   .button-o {
     font-size: 10px;
+  }
+  .section {
+    padding: 60px 0;
+  }
+  .section-title {
+    font-size: 24px;
   }
 }
 .navbar {
@@ -305,5 +323,26 @@ input[type="checkbox"]:checked + label:before {
   }
   .form_input {
     margin-bottom: 20px;
+  }
+}
+.features-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.features-block_item {
+  flex-basis: 33.33%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+@media (max-width: 991px) {
+  .features-block_item {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .features-block_item {
+    flex-basis: 100%;
+    margin-bottom: 50px;
   }
 }
