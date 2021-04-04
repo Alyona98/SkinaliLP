@@ -744,3 +744,37 @@ input[type="checkbox"]:checked + label:before {
     flex-basis: 85%;
   }
 }
+.contacts {
+  background-color: #f6f7f9;
+}
+.contacts-block {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.contacts-block_item {
+  text-align: center;
+}
+.contacts_image {
+  margin-bottom: 25px;
+}
+.contacts_text {
+  font-size: 16px;
+}
+.contacts_link {
+  text-decoration: none;
+  color: #262626;
+}
+.contacts_address {
+  font-style: normal;
+}
+@media (max-width: 360px) {
+  .contacts-block_item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .contacts_address {
+    margin: auto;
+    max-width: 200px;
+  }
+}
