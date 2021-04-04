@@ -254,6 +254,16 @@ input[type="checkbox"]:checked + label:before {
     margin-bottom: 20px;
   }
 }
+@media (max-width: 360px) {
+  .navbar_wrap {
+    max-width: 300px;
+  }
+}
+@media (max-width: 320px) {
+  .navbar_wrap {
+    max-width: 280px;
+  }
+}
 .hero {
   background: #f1f1f1 url(../img/hero/hero-bg.jpg) no-repeat center top;
   background-size: cover;
@@ -282,11 +292,19 @@ input[type="checkbox"]:checked + label:before {
   padding: 129px 0;
 }
 .offer-block {
-  background: #fff url('../img/offer/form-bg.jpg') no-repeat center right;
   background-size: contain;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
   padding: 80px;
+}
+.offer-block_calc-bg {
+  background: #fff url('../img/offer/form-bg-calc.png') no-repeat center right;
+  background-size: contain;
   margin-top: -250px;
+}
+.offer-block_price-bg {
+  background: #fff url('../img/offer/form-bg-price.png') no-repeat center right;
+  background-size: contain;
+  margin-top: -400px;
 }
 .offer_title {
   font-size: 25px;
@@ -298,12 +316,13 @@ input[type="checkbox"]:checked + label:before {
   display: block;
   font-size: 21px;
   margin-bottom: 48px;
+  max-width: 815px;
 }
 .form_row {
   display: flex;
   align-items: center;
   max-width: 900px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 .form_row:last-child {
   margin-bottom: 0;
@@ -325,11 +344,17 @@ input[type="checkbox"]:checked + label:before {
 }
 .form_button {
   height: 82px;
-  width: 300px;
+  width: 304px;
+}
+.form_button_price {
+  margin-right: 45px;
 }
 @media (max-width: 1199px) {
   .offer-block {
     background-position: center right -120px;
+  }
+  .offer_subtitle {
+    max-width: 750px;
   }
   .form_input {
     width: 230px;
@@ -359,6 +384,10 @@ input[type="checkbox"]:checked + label:before {
   }
   .form_input {
     margin-bottom: 20px;
+  }
+  .form_button_price {
+    width: 574px;
+    margin-bottom: 25px;
   }
 }
 @media (max-width: 480px) {
@@ -490,6 +519,11 @@ input[type="checkbox"]:checked + label:before {
   }
   .catalog_card {
     max-width: 470px;
+  }
+}
+@media (max-width: 768px) {
+  .catalog-block {
+    justify-content: center;
   }
 }
 @media (max-width: 361px) {
@@ -646,5 +680,67 @@ input[type="checkbox"]:checked + label:before {
 @media (max-width: 360px) {
   .step {
     width: 50%;
+  }
+}
+.reviews {
+  background-color: #f5f6f8;
+  padding-bottom: 350px;
+}
+.reviews-slider {
+  display: flex;
+  justify-content: space-between;
+}
+.reviews-slider_item {
+  text-align: center;
+}
+.reviews-slider_text {
+  position: relative;
+  font-size: 15px;
+  font-style: italic;
+  max-width: 370px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.reviews-slider_text:after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 10px;
+  border: 10px solid transparent;
+  border-top: 10px solid #fff;
+}
+.reviews-slider_image {
+  display: block;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #6a99e9;
+  border-radius: 60%;
+  margin: 20px auto;
+}
+.factory {
+  padding-top: 1px;
+}
+.factory-block {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: -55px;
+}
+.factory-block_image {
+  margin-top: 20px;
+}
+.factory-block_text {
+  margin-left: 100px;
+  flex-basis: 50%;
+  font-size: 19px;
+}
+@media (max-width: 991px) {
+  .factory-block_text {
+    margin-left: 0px;
+    flex-basis: 85%;
   }
 }
