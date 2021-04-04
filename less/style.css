@@ -778,3 +778,81 @@ input[type="checkbox"]:checked + label:before {
     max-width: 200px;
   }
 }
+.questions_title {
+  font-size: 30px;
+  font-weight: bold;
+}
+.questions-block {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.questions_link {
+  font-size: 24px;
+  color: #507fe1;
+}
+@media (max-width: 360px) {
+  .questions-block {
+    display: block;
+  }
+}
+.footer {
+  padding: 40px 0;
+  background-color: #262626;
+  color: #fff;
+}
+.footer-block {
+  display: flex;
+  justify-content: space-between;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer_title {
+  font-size: 18px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.footer_subtitle {
+  display: block;
+  margin-bottom: 48px;
+  font-weight: 200;
+}
+.footer_copy {
+  color: #767676;
+}
+.footer_pay-logo {
+  margin: 15px;
+}
+.footer_contacts {
+  text-align: right;
+}
+.footer_phone {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.footer_mail {
+  display: block;
+  margin-bottom: 20px;
+}
+.footer-social_image {
+  margin-left: 10px;
+}
+@media (max-width: 768px) {
+  .footer-block {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer_contacts {
+    margin-top: 30px;
+    text-align: center;
+  }
+}
