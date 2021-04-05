@@ -7,6 +7,7 @@
     <title>Фабрика скинали</title>
     <link rel="stylesheet" href="less/normalize.css">
     <link rel="stylesheet" href="less/style.css">
+    <link rel="stylesheet" href="less/twentytwenty.css">
 </head>
 <body>
     
@@ -44,7 +45,7 @@
                         <a class="navbar_phone" href="tel:+79121234567">+7 912 123-45-67</a>
                         <a class="navbar_email navbar_small-text" href="mailto:skinali@mail.ru">skinali@mail.ru</a>
                     </div>
-                    <button class="button_o navbar_button">Получить консультацию</button>
+                    <a href="#offer" class="button_o navbar_button">Получить консультацию</a>
                 </div>
             </div>
         </div>
@@ -52,13 +53,13 @@
             <div class="container">
                 <h1 class="hero_title">Гарантия<br>минимальной<br>цены на скинали</h1>
                 <span class="hero_subtitle">от 3 000 р/м2</span>
-                <button class="button hero_button">Заказать скинали</button>
+                <a  href="#offer" class="button hero_button">Заказать скинали</a>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="offer bg-secondary">
+        <section class="offer bg-secondary" id="offer">
             <div class="container">
                 <div class="offer_block offer-block offer-block_calc-bg">
                     <h2 class="offer_title">Оставьте заявку на расчет</h2>
@@ -68,15 +69,22 @@
                             <div class="form_row">
                                 <div class="form_group">
                                     <label class="form_lable">Вид стекла</label>
-                                    <input type="text" class="input form_input">
+                                    <input type="hidden" name="type" id="select-type" value="С печатью" class="input form_input">
+                                    <div class="select form_select">
+                                        <div class="select_checked">С печатью</div>
+                                        <ul class="select_dropdown">
+                                            <li class="select_option" data-value="С печатью">С печатью</li>
+                                            <li class="select_option" data-value="Без печати">Без печати</li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="form_group">
                                     <label class="form_lable">Ширина, см</label>
-                                    <input type="text" class="input form_input">
+                                    <input type="number" class="input form_input">
                                 </div>
                                 <div class="form_group">
                                     <label class="form_lable">Высота, см</label>
-                                    <input type="text" class="input form_input">
+                                    <input type="number" class="input form_input">
                                 </div>
                             </div>
                             <div class="form_row form_row-checkbox">
@@ -423,6 +431,41 @@
                 </div>
             </div>
         </section>
+
+        <section class="section before">
+            <div class="container">
+                <h2 class="section-title section_title">До и после</h2>
+                <div class="before-slider-wrap">
+                   <div class="before-slider">
+                    <div class="before-slider_item">
+                        <div class="before-after">
+                            <img src="img/before/before.png" alt="">
+                            <img src="img/before/after.png" alt="">
+                        </div>
+                    </div>
+                    <div class="before-slider_item"><div class="before-after">
+                            <img src="img/before/before.png" alt="">
+                            <img src="img/before/after.png" alt="">
+                        </div>
+                    </div>
+                    <div class="before-slider_item"><div class="before-after">
+                            <img src="img/before/before.png" alt="">
+                            <img src="img/before/after.png" alt="">
+                        </div>
+                    </div>
+                </div> 
+                    <div class="before-slider_arrows">
+                        <button class="arrow arrow-left">
+                            <img src="img/before/left.png" alt="">
+                        </button>
+                        <button class="arrow arrow-right">
+                            <img src="img/before/right.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section reviews">
             <div class="container">
                 <h2 class="section-title section_title">Отзывы наших клиентов</h2>
@@ -476,10 +519,10 @@
                                 <input type="text" class="input form_input" placeholder="Ваше имя">
                             </div>
                             <div class="form_group">
-                                <input type="text" class="input form_input" placeholder="Ваш телефон">
+                                <input type="tel" class="input form_input" placeholder="Ваш телефон">
                             </div>
                             <div class="form_group">
-                                <input type="text" class="input form_input" placeholder="Ваша цена">
+                                <input type="number" class="input form_input" placeholder="Ваша цена">
                             </div>
                         </div>
                         <div class="form_row">
@@ -540,9 +583,7 @@
                 </div>
             </div>
         </section>
-        <div class="map" id="map">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A504eeaed5e465df7e7341e2f621283f862ff17b997fe597381ff0d70d75c2f3f&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=false"></script>
-        </div>
+        <div class="map" id="map"></div>
         <section class="section questions">
             <div class="container">
                 <div class="questions-block">
@@ -588,5 +629,11 @@
 
     <!-- Подключение виджета обратной связи через соцсети -->
     <script type="text/javascript" src="https://spikmi.com/Widget?Id=5739"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
 </body>
 </html>

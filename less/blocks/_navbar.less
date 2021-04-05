@@ -42,10 +42,12 @@
     padding: 16px 0;
     background-color: @primary;
     color: #fff;
+    transition: 0.3s;
     transform: translateY(-200%);
     opacity: 0;
 
     &_active {
+        transition: 0.3s;
         transform: translateY(0);
         opacity: 1;
     }
@@ -72,7 +74,12 @@
         border-left: 1px solid rgba(#510bba, 0.1);
         height: 80px;
         width: 70px;
-
+        &:hover {
+            cursor: pointer;
+        }
+        &:focus {
+            outline: none;
+        }
         &_line {
             display: block;
             width: 20px;
@@ -104,6 +111,21 @@
         }
     }
 }
+@media (max-width: 768px) {
+    .navbar {
+        &_wrap {
+            max-width: 96%;
+        }
+    }
+    .menu {
+        &_link {
+          font-size: 12px;  
+        }
+        &_active {
+            width: 96%;
+        }
+    }
+}
 @media (max-width: 576px) {
     .logo {
         display: none;
@@ -128,11 +150,21 @@
             max-width: 300px;
         }
     }
+    .menu {
+        &_active {
+            width: 79%;
+        }
+    }
 }
 @media (max-width: 320px) {
     .navbar {
         &_wrap {
             max-width: 280px;
+        }
+    }
+    .menu {
+        &_active {
+            width: 71%;
         }
     }
 }
