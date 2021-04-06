@@ -2,6 +2,8 @@ $(window).load(function() {
     $(".before-after").twentytwenty({
         before_label: 'Без скинали',
         after_label: 'Со скинали',
+        move_slider_on_hover: true,
+        move_with_handle_only: true,
     });
     $(".before-slider").slick({
         draggable: false,
@@ -9,7 +11,27 @@ $(window).load(function() {
         dotsClass: 'before-slider_dots',
         prevArrow: $('.arrow-left'),
         nextArrow: $('.arrow-right'),
+        responsive: [
+            {
+              breakpoint: 769,
+              settings: {
+                touchMove: false,
+                arrows: false,
+              }
+            },
+        ],
     });
+    /*Слайдер для отзывов*/
+    $('.reviews-slider').slick({
+            centerMode: true,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            variableWidth: true,
+		prevArrow:"<button type=\"button\" class=\"slick-prev\"><img src=\"img/before/left.png\"></button>",
+		nextArrow:"<button type=\"button\" class=\"slick-prev\"><img src=\"img/before/right.png\"></button>",
+    });
+    /*Настройка выпадающего меню*/
     $(".menu-button").on('click', function(){
         $('.menu').toggleClass('menu_active');
     });
@@ -23,6 +45,7 @@ $(window).load(function() {
         $('.select_checked').text(value);
         $('.select_dropdown').toggleClass('select_dropdown_open');
     });
+    /*Внутренние ссылки на offer*/
     $("a[href^='#']").click(function(){
         var _href = $(this).attr("href");
         $("html, body").animate({scrollTop: $(_href).offset().top -120 + "px" });

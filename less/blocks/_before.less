@@ -56,3 +56,60 @@
         transform: translateX(100%);
     }
 } 
+
+
+@media (max-width: 768px) {
+    .before {
+        &-slider {
+            &-wrap {
+                width: 728px;
+            }
+            &_arrows {
+                display: none;  
+            }
+            &_dots {
+                li {
+                    width: 13px;
+                    height: 13px;
+                    margin: 0px 20px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .before {
+        &-slider {
+            &-wrap {
+                width: 440px;
+            }
+        }
+    }
+}
+@media (max-width: 375px) {
+    .before {
+        &-slider {
+            &-wrap {
+                width: 335px;
+            }
+        }
+    }
+}
+@media (max-width: 360px) {
+    .before {
+        &-slider {
+            &-wrap {
+                width: 320px;
+            }
+        }
+    }
+}
+@media (max-width: 320px) {
+    .before {
+        &-slider {
+            &-wrap {
+                width: 280px;
+            }
+        }
+    }
+}

@@ -6,9 +6,28 @@
     &-slider {
         display: flex;
         justify-content: space-between;
+        button.slick-prev,  button.slick-next {
+            border: none;
+            padding: 0;
+            background: none;
+            height: 43px;
+            min-width: 43px;
+            margin: auto;
+            outline: none;
+        }
         &_item {
             text-align: center;
             max-width: 380px;
+            margin: 20px 5px;
+
+            //проба слайдера
+            &.slick-slide{
+                opacity: 0.5;
+            }
+            
+            &.slick-center {
+                opacity: 1;
+            } 
         }
         &_text {
             position: relative;
@@ -39,4 +58,24 @@
            margin: 20px auto;
         }
     }
+}
+@media (max-width: 480px) {
+    .reviews-slider_item {
+        width: 260px;
+    } 
+}
+@media (max-width: 375px) {
+    .reviews-slider_item {
+        width: 240px;
+    } 
+}
+@media (max-width: 360px) {
+    .reviews-slider_item {
+        width: 225px;
+    } 
+}
+@media (max-width: 320px) {
+    .reviews-slider_item {
+        width: 195px;
+    } 
 }
