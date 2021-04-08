@@ -1,26 +1,26 @@
 $(window).load(function() {
+
+    $(".before-slider").slick({
+        draggable: false,
+        appendDots: $(".before-slider-wrap"),
+        dots: true,
+        dotsClass: 'before-slider_dots',
+        prevArrow:"<button type=\"button\" class=\"arrow slick-prev\"><img src=\"img/before/left.png\"></button>",
+		nextArrow:"<button type=\"button\" class=\"arrow slick-next\"><img src=\"img/before/right.png\"></button>",
+        responsive: [{
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+              }
+            }],
+    });
     $(".before-after").twentytwenty({
         before_label: 'Без скинали',
         after_label: 'Со скинали',
         move_slider_on_hover: true,
         move_with_handle_only: true,
     });
-    $(".before-slider").slick({
-        draggable: false,
-        dots: true,
-        dotsClass: 'before-slider_dots',
-        prevArrow: $('.arrow-left'),
-        nextArrow: $('.arrow-right'),
-        responsive: [
-            {
-              breakpoint: 769,
-              settings: {
-                touchMove: false,
-                arrows: false,
-              }
-            },
-        ],
-    });
+    
     /*Слайдер для отзывов*/
     $('.reviews-slider').slick({
             centerMode: true,
@@ -29,7 +29,7 @@ $(window).load(function() {
             slidesToScroll: 1,
             variableWidth: true,
 		prevArrow:"<button type=\"button\" class=\"slick-prev\"><img src=\"img/before/left.png\"></button>",
-		nextArrow:"<button type=\"button\" class=\"slick-prev\"><img src=\"img/before/right.png\"></button>",
+		nextArrow:"<button type=\"button\" class=\"slick-next\"><img src=\"img/before/right.png\"></button>",
     });
     /*Настройка выпадающего меню*/
     $(".menu-button").on('click', function(){
