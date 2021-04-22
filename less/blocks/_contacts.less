@@ -6,37 +6,35 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        &_item {
+        &__item {
             text-align: center;
         }
     }
-    &_image {
+    &__image {
         margin-bottom: 25px;
     }
-    &_text {
+    &__text {
         font-size: 16px;
     }
-    &_link {
+    &__link {
         text-decoration: none;
         color: @text_color;
     }
-    &_address {
+    &contacts__address {
         font-style: normal;
     }
 } 
 @media (max-width: 480px) {
     .contacts {
         &-block {
-            &_item {
+            &__item {
                 width: 100%;
                 margin-bottom: 30px;
             }
         }
-        &_address {
+        &__address {
            margin: auto;
             max-width: 200px; 
         }
-
-        
     }
 }

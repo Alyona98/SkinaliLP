@@ -1,17 +1,17 @@
 //out: false
 
 .blog {
-    &_heading {
+    &__heading {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 70px;
     }
-    &_title {
+    &__title {
         font-size: 24px;
         font-weight: bold;
     }
-    &_link-more {
+    &__link-more {
         color: @primary;
         font-size: 16px;
     }
@@ -19,16 +19,16 @@
        display: flex;
        justify-content: space-between;
        flex-wrap: wrap;
-       &_image {
+       &__image {
            height: 200px;
        }
-       &_text {
+       &__text {
         display: flex;
         justify-content: center;
         align-items: center; 
         min-height: 80px; 
        } 
-       &_card {
+       &__card {
            margin-bottom: 20px;
        }
     }
@@ -51,7 +51,7 @@
 }
 @media (max-width: 480px) {
     .blog {
-        &_heading {
+        &__heading {
             display: block; 
             padding-left: 40px; 
         }
@@ -59,14 +59,14 @@
 }
 @media (max-width: 360px) {
     .blog {
-        &_heading {
+        &__heading {
             padding-left: 20px; 
         }
     }
 }
 @media (max-width: 320px) {
     .blog {
-        &_heading {
+        &__heading {
             padding-left: 0px;  
         }
     }

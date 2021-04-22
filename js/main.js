@@ -1,5 +1,5 @@
 $(window).load(function() {
-
+    /*Слайдер 'До и после'*/
     $(".before-slider").slick({
         draggable: false,
         appendDots: $(".before-slider-wrap"),
@@ -20,7 +20,6 @@ $(window).load(function() {
         move_slider_on_hover: true,
         move_with_handle_only: true,
     });
-    
     /*Слайдер для отзывов*/
     $('.reviews-slider').slick({
             centerMode: true,
@@ -39,7 +38,7 @@ $(window).load(function() {
     $(".select_checked").on('click', function(){
         $('.select_dropdown').toggleClass('select_dropdown_open');
     });
-    $(".select_option").on('click', function(){
+    $(".select__option").on('click', function(){
         var value = $(this).attr('data-value');
         $('#section-type').val(value);
         $('.select_checked').text(value);
@@ -51,6 +50,7 @@ $(window).load(function() {
         $("html, body").animate({scrollTop: $(_href).offset().top -120 + "px" });
         return false;
     });
+    /*Форма записи телефона*/
     $('input[type="tel"]').mask("+7 (999) 999-99-99")
     /* Показ карты в момент допрокрутки */
     var reviews = $('.reviews');
