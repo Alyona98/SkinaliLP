@@ -8,7 +8,7 @@
         font-size: 18px;
         margin-top: 5px;
     }
-    &:before {
+    &::before {
         content: '';
         width: 75%;
         height: 2px;
@@ -43,7 +43,7 @@
 
 @media screen and (max-width: 1024px) {
     .step {
-        &:before {
+        &::before {
             width: 48%;
             right: -24%;
         }
@@ -52,7 +52,7 @@
 @media screen and (max-width: 991px) {
     .step {
         width: 33.33%;
-        &:before {
+        &::before {
             display: none;
         }
     } 

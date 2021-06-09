@@ -69,7 +69,7 @@ img {
 }
 input[type="checkbox"]{
     display: none; 
-    &:checked + label:before{
+    &:checked + label::before{
         background-color: @primary;
     } 
 } 
@@ -82,7 +82,7 @@ input[type='number']::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     border: 1px solid #dddddd;
     position: relative;
     border-right-width: 0px;
-    &:after {
+    &::after {
         content: '';
         position: absolute;
         top: 50%;
@@ -135,7 +135,7 @@ option {
         &:hover {
             cursor: pointer;
         }
-        &:before {
+        &::before {
             content: '';
             width: 30px;
             height: 30px;

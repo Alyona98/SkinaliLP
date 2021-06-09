@@ -1175,7 +1175,7 @@ option {
   text-decoration: none;
   color: #262626;
 }
-.contactscontacts__address {
+.contacts__address {
   font-style: normal;
 }
 @media (max-width: 480px) {
