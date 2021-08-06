@@ -6,6 +6,8 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 70px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
     &__title {
         font-size: 24px;
@@ -49,25 +51,19 @@
         }
     }
 }
+@media screen and (max-width: 768px) {
+    .blog {
+        &__heading {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}
 @media screen and (max-width: 480px) {
     .blog {
         &__heading {
-            display: block; 
-            padding-left: 40px; 
-        }
-    }
-}
-@media screen and (max-width: 360px) {
-    .blog {
-        &__heading {
-            padding-left: 20px; 
-        }
-    }
-}
-@media screen and (max-width: 320px) {
-    .blog {
-        &__heading {
-            padding-left: 0px;  
+            margin-left: 10px;
+            margin-right: 10px;
         }
     }
 }

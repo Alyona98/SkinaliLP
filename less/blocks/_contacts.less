@@ -24,6 +24,14 @@
         font-style: normal;
     }
 } 
+
+@media screen and (max-width: 600px) {
+    .contacts {
+        &__address {
+            width: 165px;
+        }
+    }
+}
 @media screen and (max-width: 480px) {
     .contacts {
         &-block {
@@ -33,7 +41,7 @@
             }
         }
         &__address {
-           margin: auto;
+            margin: auto;
             max-width: 200px; 
         }
     }

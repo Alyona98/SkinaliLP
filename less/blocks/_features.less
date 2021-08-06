@@ -20,6 +20,11 @@
         &-block {
             &__item {
                 flex-basis: 50%;
+                margin-bottom: 50px;
+            }
+            &__text {
+                width: 90%;
+                margin: 16px;
             }
         }
     }
@@ -27,7 +32,6 @@
 @media screen and (max-width: 768px) {
     .features{
         &-block {
-            flex-wrap: nowrap;
             &__item {
                 margin-bottom: 50px;
             }
@@ -37,7 +41,10 @@
 @media screen and (max-width: 480px) {
     .features{
         &-block {
-            flex-wrap: wrap;
+            &__text {
+                width: 90%;
+                margin: 7px;
+            }
         }
     }
 }

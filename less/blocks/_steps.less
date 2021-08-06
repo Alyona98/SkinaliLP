@@ -41,7 +41,7 @@
 
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .step {
         &::before {
             width: 48%;
@@ -57,13 +57,19 @@
         }
     } 
 }
-@media screen and (max-width: 375px) {
-    .step {
-        width: 47%;
-    } 
-}
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 580px) {
     .step {
         width: 50%;
     } 
+}
+@media screen and (max-width: 400px) {
+    .step {
+        width: 85%;
+        &s-block {
+            justify-content: center;
+        }
+        &__text {
+            max-width: 250px;
+        }
+    }
 }

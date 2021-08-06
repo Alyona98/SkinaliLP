@@ -69,25 +69,33 @@
 @media screen and (max-width: 1199px) {
     .catalog {
         &-block {
-            justify-content: space-between;
+            justify-content: space-around;
         }
         &__card {
             max-width: 470px;
         }
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
     .catalog {
         &-block {
             justify-content: center;
         }
+        &__card {
+            max-width: 365px;
+            margin: 5px;
+        }
     } 
 }
-@media screen and (max-width: 361px) {
+@media screen and (max-width: 768px) {
     .catalog {
+        &__card {
+            max-width: 100%;
+        }
         &-card__tag {
             top: 0;
             left: 0;
+            padding: 7px;
         }
-    }
+    } 
 }

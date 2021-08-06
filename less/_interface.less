@@ -50,6 +50,10 @@ img {
     &-add {
         color: #fff;
         background-color: lighten(@primary, 10%);
+        padding: 8px;
+        font-size: 12px;
+        text-transform: uppercase;
+        text-decoration: none;
     }
     &-like {
         background-color: @primary;
@@ -64,7 +68,7 @@ img {
 }
 .input {
     height: 78px;
-    padding-left: 30px;
+    padding: 0 15px;
     border: 1px solid #dddddd;
 }
 input[type="checkbox"]{
@@ -77,8 +81,8 @@ input[type='number']::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     -webkit-appearance: none;
 }
 .select {
-    height: 80px;
-    width: 302px;
+    height: 78px;
+    width: 100%;
     border: 1px solid #dddddd;
     position: relative;
     border-right-width: 0px;
@@ -102,7 +106,7 @@ input[type='number']::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     }
     &_dropdown {
         position: absolute;
-        top: 81px;
+        top: 79px;
         width: 100%;
         background-color: #fff;
         border: 1px solid #dddddd;
@@ -144,28 +148,44 @@ option {
         }  
     }
 }
-
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
     .select {
-        width: 265px; 
         &_dropdown{
-           width: 266px; 
+            width: 100%; 
+            top: 79px;
+        }
+        &__option {
+            padding: 16px;
+        }
+    }
+    .button {
+        padding: 25px 0px;
+        &_lg {
+            padding: 20px;
         }
     }
 }
 @media screen and (max-width: 768px) {
+    .section {
+        &__title {
+            margin-bottom: 60px;
+        }
+    }
     .select {
         border-right-width: 1px;
-        width: 571px; 
+        width: 85%;
         margin-bottom: 20px;
+        padding: 0 15px;
         &_dropdown{
-           width: 571px; 
+           width: 100%; 
+           left: 0;
+           z-index: 99;
         }
     }
 }
 @media screen and (max-width: 576px) {
     .button{
-        font-size: 10px;
+        font-size: 13px;
         &_o {
             font-size: 10px;
         }
@@ -176,29 +196,29 @@ option {
             font-size: 24px;
         }
     }
+    .select {
+        height: 60px;
+        width: 80%;
+        &_checked {
+            line-height: 60px;
+            padding-left: 5px;
+        }
+        &_dropdown {
+            top: 61px;
+        }
+        &__option {
+            padding: 15px 20px;
+        }
+    }
 }
 @media screen and (max-width: 480px) {
     .select {
-        width: 362px;
-        &_dropdown{
-           width: 362px; 
-        }
+        width: 90%;
     }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 361px) {
     .select {
-        width: 262px;
-        &_dropdown{
-           width: 262px; 
-        }
-    }
-}
-@media screen and (max-width: 320px) {
-    .select {
-        width: 232px;
-        &_dropdown{
-           width: 232px; 
-        }
+        width: 86%;
     }
 }
 

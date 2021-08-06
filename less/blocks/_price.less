@@ -47,15 +47,63 @@
             }
         }
     }
+    &__button {
+        position: absolute;
+        left: 10%;
+        text-decoration: none;
+    }
 } 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .price {
+        &__button {
+            padding: 20px 45px;
+        } 
         &-block {
             justify-content: center;
             &__card {
-                margin: 20px;
+                margin: 10px;
             }
         }
+    }
+}
+@media screen and (max-width: 620px) {
+    .price {
+        &__button {
+            padding: 15px 40px;
+            width: 43%;
+        } 
+    }
+}
+@media screen and (max-width: 670px) {
+    .price {
+        &-block {
+            &__card {
+                width: 45%;
+            }
+        }
+        &-card {
+            &__text {
+                font-size: 13px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 520px) {
+    .price {
+        &-block {
+            &__card {
+                width: 280px;
+            }
+        }
+        &-card {
+            &__text {
+                font-size: 15px;
+            }
+        } 
+        &__button {
+            padding: 20px 40px;
+            width: 50%;
+        } 
     }
 }
